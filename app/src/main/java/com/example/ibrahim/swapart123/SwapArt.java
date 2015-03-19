@@ -27,6 +27,8 @@ public class SwapArt extends Activity implements View.OnClickListener {
         if(v == tilbageBtn)
         {
             finish();
+            //ghjsgafhgaskjdfgaisg
+            //hkjdfkjsdhfks
         }
     }
 }
