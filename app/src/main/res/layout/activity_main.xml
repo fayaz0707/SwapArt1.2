@@ -1,0 +1,130 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/bg"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+
+
+    <ImageView
+        android:layout_width="160dp"
+        android:layout_height="176dp"
+        android:id="@+id/imageView"
+        android:background = "@drawable/roundedbutton"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="160dp"
+        android:layout_height="176dp"
+        android:id="@+id/imageView2"
+        android:background = "@drawable/roundedbutton"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/button6"
+        android:background = "@drawable/roundedbutton"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_toEndOf="@+id/button6"
+        android:layout_alignTop="@+id/imageView"
+        android:weightSum="1"
+        android:id="@+id/linearLayout">
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_weight="0.15"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:layout_marginLeft="4dip"
+            android:layout_marginRight="10dip"
+            android:background = "@drawable/roundedbutton"
+            android:text="Swap Art"
+            android:textStyle="bold"
+            android:id="@+id/swapBtn" />
+            />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_weight="0.15"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:layout_marginLeft="4dip"
+            android:layout_marginRight="10dip"
+            android:background = "@drawable/roundedbutton"
+            android:text="Opload Art"
+            android:textStyle="bold"
+            android:id="@+id/oploadBtn" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_weight="0.15"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:layout_marginLeft="4dip"
+            android:layout_marginRight="10dip"
+            android:background = "@drawable/roundedbutton"
+            android:text="Edit Art"
+            android:textStyle="bold"
+            android:id="@+id/editBtn" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_weight="0.15"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:layout_marginLeft="4dip"
+            android:layout_marginRight="10dip"
+            android:background = "@drawable/roundedbutton"
+            android:text="Matches Art"
+            android:textStyle="bold"
+            android:id="@+id/matchBtn" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_weight="0.15"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:layout_marginLeft="4dip"
+            android:layout_marginRight="10dip"
+            android:background = "@drawable/roundedbutton"
+            android:text="Instillinger"
+            android:textStyle="bold"
+            android:id="@+id/instillingerBtn" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background = "@drawable/roundedbutton"
+        android:textSize="15dp"
+        android:text="Seneste Match"
+        android:textColor="#FFFFFF"
+        android:id="@+id/textView"
+        android:textStyle="bold"
+        android:layout_below="@+id/imageView"
+        android:layout_toStartOf="@+id/button6" />
+
+</RelativeLayout>
