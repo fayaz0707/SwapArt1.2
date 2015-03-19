@@ -4,5 +4,6 @@
     <string name="app_name">SwapArt1.2</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="regler"><a href='http://www.google.com'>Jeg har læst og accepterer SwapArts betingelser</a></string>
 
 </resources>
