@@ -2,9 +2,7 @@ package com.example.ibrahim.swapart123;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -74,6 +72,9 @@ public class MainActivity extends Activity implements View.OnClickListener{
         if(v == swapBtn)
         {
             Intent intent = new Intent(this, SwapArt.class);
+            startActivity(intent);
+        }else if (v==oploadBtn){
+            Intent intent = new Intent(this, UploadBillede.class);
             startActivity(intent);
         }
     }
