@@ -75,7 +75,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
             startActivity(intent);
         }else if (v==oploadBtn){
             Intent intent = new Intent(this, UploadBillede.class);
-            startActivity(intent);//
+            startActivity(intent);//hgf
         }
     }
 }
