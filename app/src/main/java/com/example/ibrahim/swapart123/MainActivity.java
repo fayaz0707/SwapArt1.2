@@ -2,7 +2,9 @@ package com.example.ibrahim.swapart123;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -24,13 +26,13 @@ public class MainActivity extends Activity implements View.OnClickListener{
         setContentView(R.layout.activity_main);//jhgjhg
 
         // Enable Local Datastore./kjhkjhkjh     https://github.com/fayaz0707/SwapArt.git
-        Parse.enableLocalDatastore(this);
+       // Parse.enableLocalDatastore(this);
 
-        Parse.initialize(this, "SypVmMOGroZ9crfo7fCJsaJgW7qI9f1YBcVmJlLa", "HCsmkcvyULayHEDwud0mO8z2cohrfAv3UwiVWuUT");
+        //Parse.initialize(this, "SypVmMOGroZ9crfo7fCJsaJgW7qI9f1YBcVmJlLa", "HCsmkcvyULayHEDwud0mO8z2cohrfAv3UwiVWuUT");
 
-
-        ParseObject testObject = new ParseObject("TestObject");
-        testObject.saveInBackground();
+        //ParseObject testObject = new ParseObject("TestObject");
+        //testObject.put("foo", "bar");
+        //testObject.saveInBackground();
         imageView1 = (ImageView)findViewById(R.id.imageView);
         imageView2 = (ImageView)findViewById(R.id.imageView2);
         //imageView3 = (ImageView)findViewById(R.id.imageView3);
@@ -63,7 +65,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
             return true;
         }
 
-        return super.onOptionsItemSelected(item);
+        return super.onOptionsItemSelected(item);//
     }
 
     @Override
@@ -72,9 +74,6 @@ public class MainActivity extends Activity implements View.OnClickListener{
         if(v == swapBtn)
         {
             Intent intent = new Intent(this, SwapArt.class);
-            startActivity(intent);
-        }else if (v==oploadBtn){
-            Intent intent = new Intent(this, UploadBillede.class);
             startActivity(intent);
         }
     }
