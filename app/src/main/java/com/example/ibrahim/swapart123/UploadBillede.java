@@ -23,6 +23,7 @@ import java.io.IOException;
 public class UploadBillede extends Activity implements View.OnClickListener {
 
     Button galleriButton, kameraButton, uploadButton;
+    ImageView imageView3;
     private int VÆLG_BILLEDE=1111;
     private int TAG_BILLEDE = 2222;
 
@@ -32,7 +33,7 @@ public class UploadBillede extends Activity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.upload_billede);
 
-       // imageView3=(ImageView) findViewById(R.id.imageView3);
+        imageView3=(ImageView) findViewById(R.id.imageView3);
         //imageView3.setImageResource(R.drawable.logo);
         galleriButton=(Button)findViewById(R.id.galleri_Button);
         galleriButton.setOnClickListener(this);
@@ -73,7 +74,7 @@ public class UploadBillede extends Activity implements View.OnClickListener {
 
                 }else if (resultCode==TAG_BILLEDE){
                     Bitmap bmp = (Bitmap) resIntent.getExtras().get("data");
-                    ImageView imageView3= new ImageView(this);
+                    //ImageView imageView3= new ImageView(this);
                     imageView3.setImageBitmap(bmp);
                 }
             }catch (IOException e) {
