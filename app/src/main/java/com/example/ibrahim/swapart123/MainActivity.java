@@ -28,8 +28,8 @@ public class MainActivity extends Activity implements View.OnClickListener{
 
         Parse.initialize(this, "SypVmMOGroZ9crfo7fCJsaJgW7qI9f1YBcVmJlLa", "HCsmkcvyULayHEDwud0mO8z2cohrfAv3UwiVWuUT");
 
+
         ParseObject testObject = new ParseObject("TestObject");
-        testObject.put("foo", "bar");
         testObject.saveInBackground();
         imageView1 = (ImageView)findViewById(R.id.imageView);
         imageView2 = (ImageView)findViewById(R.id.imageView2);

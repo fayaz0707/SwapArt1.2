@@ -25,14 +25,15 @@ public class UploadBillede extends Activity implements View.OnClickListener {
     Button galleriButton, kameraButton, uploadButton;
     private int VÆLG_BILLEDE=1111;
     private int TAG_BILLEDE = 2222;
-    ImageView imageView3;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.upload_billede);
 
-        imageView3=(ImageView) findViewById(R.id.imageView3);
+       // imageView3=(ImageView) findViewById(R.id.imageView3);
+        //imageView3.setImageResource(R.drawable.logo);
         galleriButton=(Button)findViewById(R.id.galleri_Button);
         galleriButton.setOnClickListener(this);
         kameraButton=(Button)findViewById(R.id.kamera_Button);
@@ -67,10 +68,12 @@ public class UploadBillede extends Activity implements View.OnClickListener {
                 if (resultCode== VÆLG_BILLEDE){
                     AssetFileDescriptor filDS = getContentResolver().openAssetFileDescriptor(resIntent.getData(), "r");
                     Bitmap bmp = BitmapFactory.decodeStream(filDS.createInputStream());
+                    ImageView imageView3= new ImageView(this);
                     imageView3.setImageBitmap(bmp);
 
                 }else if (resultCode==TAG_BILLEDE){
                     Bitmap bmp = (Bitmap) resIntent.getExtras().get("data");
+                    ImageView imageView3= new ImageView(this);
                     imageView3.setImageBitmap(bmp);
                 }
             }catch (IOException e) {
