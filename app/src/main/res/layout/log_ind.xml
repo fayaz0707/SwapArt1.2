@@ -10,77 +10,34 @@
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
         android:ems="10"
-        android:id="@+id/EmailEditText"
-        android:layout_marginTop="57dp"
+        android:id="@+id/userText"
+        android:hint="Indtast venligst brugernavn"
         android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_toRightOf="@+id/textView"
-        android:layout_toEndOf="@+id/textView" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Email"
-        android:id="@+id/textView"
-        android:layout_alignBottom="@+id/EmailEditText"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Kode"
-        android:id="@+id/textView2"
-        android:layout_below="@+id/EmailEditText"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="44dp" />
+        android:layout_marginTop="79dp"
+        android:layout_alignParentEnd="true" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
-        android:id="@+id/KodeEditText"
-        android:layout_alignBottom="@+id/textView2"
-        android:layout_alignLeft="@+id/EmailEditText"
-        android:layout_alignStart="@+id/EmailEditText"
-        android:layout_alignRight="@+id/EmailEditText"
-        android:layout_alignEnd="@+id/EmailEditText" />
+        android:id="@+id/kodeText"
+        android:hint="Indtast venligst kode"
+        android:layout_below="@+id/userText"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="59dp"
+        android:layout_alignParentEnd="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background = "@drawable/roundedbutton"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
         android:text="Log ind"
-        android:id="@+id/Log_indButton"
-        android:layout_marginTop="135dp"
-        android:layout_below="@+id/textView2"
-        android:layout_alignRight="@+id/KodeEditText"
-        android:layout_alignEnd="@+id/KodeEditText" />
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/checkBox"
-        android:layout_marginTop="37dp"
-        android:checked="false"
-        android:layout_below="@+id/textView2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/regler"
-        android:id="@+id/textView3"
-        android:layout_alignTop="@+id/checkBox"
-        android:layout_toRightOf="@+id/textView2"
-        android:layout_toEndOf="@+id/textView2"
-        android:autoLink="web"
-        android:onClick="onClick"
-        android:clickable="true"/>
+        android:id="@+id/logIndbutton"
+        android:layout_marginTop="41dp"
+        android:layout_below="@+id/kodeText"
+        android:layout_alignParentEnd="true" />
 </RelativeLayout>
