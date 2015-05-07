@@ -18,7 +18,7 @@
         android:layout_width="63dp"
         android:layout_height="125dp"
         android:id="@+id/imageView9"
-        android:background = "@drawable/Pil"
+        android:background = "@drawable/pil"
         android:layout_gravity="right"
         android:layout_alignBottom="@+id/imageView7"
         android:layout_alignParentEnd="true" />
@@ -27,7 +27,7 @@
         android:layout_width="63dp"
         android:layout_height="125dp"
         android:id="@+id/imageView8"
-        android:background = "@drawable/RedArrow"
+        android:background = "@drawable/redarrow"
         android:layout_alignBottom="@+id/imageView7"
         android:layout_alignParentStart="true" />
 

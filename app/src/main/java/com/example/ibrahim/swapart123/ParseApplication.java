@@ -15,7 +15,7 @@ public class ParseApplication extends Application {
 
     @Override
     public void onCreate() {
-       // super.onCreate();
+       // super.onCreate(); jasjajsfa
 
         // Enable Local Datastore./kjhkjhkjh     https://github.com/fayaz0707/SwapArt.git
         Parse.enableLocalDatastore(this);
