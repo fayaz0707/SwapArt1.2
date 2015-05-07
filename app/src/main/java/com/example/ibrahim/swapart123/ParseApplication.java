@@ -9,13 +9,14 @@ import com.parse.ParseACL;
 import com.parse.ParseUser;
 
 import android.app.Application;
+import android.content.Intent;
 
 public class ParseApplication extends Application {
 
     @Override
     public void onCreate() {
-        super.onCreate();
-        
+       // super.onCreate();
+
         // Enable Local Datastore./kjhkjhkjh     https://github.com/fayaz0707/SwapArt.git
         Parse.enableLocalDatastore(this);
 
