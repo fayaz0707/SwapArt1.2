@@ -14,7 +14,7 @@ public class GemBillede extends Activity implements View.OnClickListener {
 
     }
     @Override
-    public void onClick(View v){//nbnbnbn
+    public void onClick(View v){//nbn
 
     }
 }
