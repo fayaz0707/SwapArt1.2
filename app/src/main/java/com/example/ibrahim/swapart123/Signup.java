@@ -18,6 +18,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.ibrahim.swapart1.R;
+import com.parse.Parse;
 import com.parse.ParseException;
 import com.parse.ParseUser;
 import com.parse.SignUpCallback;
@@ -38,6 +39,11 @@ public class Signup extends Activity implements OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sign_up);
+
+         //Enable Local Datastore./kjhkjhkjh     //https://github.com/fayaz0707/SwapArt.git
+         Parse.enableLocalDatastore(this);
+
+        Parse.initialize(this, "SypVmMOGroZ9crfo7fCJsaJgW7qI9f1YBcVmJlLa", "HCsmkcvyULayHEDwud0mO8z2cohrfAv3UwiVWuUT");
 
 
         wb = new WebView(this);
@@ -81,6 +87,7 @@ public class Signup extends Activity implements OnClickListener {
 
                             if (e == null) {
                                 // Success!
+
                                 Intent intent = new Intent(Signup.this, MainActivity.class);
                                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
