@@ -29,7 +29,7 @@ public class Logind extends Activity implements OnClickListener {
     Button logIndKnap;
     EditText email;
     EditText kode;
-    TextView tv;
+    TextView tv;//vbnvnvn
     WebView wb;
     CheckBox checkBox;
 
