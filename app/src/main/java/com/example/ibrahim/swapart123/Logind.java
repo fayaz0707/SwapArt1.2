@@ -36,6 +36,9 @@ EditText userText, kodeText;//vvjv
 
     @Override
     public void onClick(View v) {
+        if(true){
+
+        }
 
 
     }
