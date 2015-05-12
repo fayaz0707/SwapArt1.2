@@ -16,7 +16,7 @@ import com.example.ibrahim.swapart1.R;
 public class Logind extends Activity implements OnClickListener {
 
 Button logindButton;
-EditText userText, kodeText;
+EditText userText, kodeText;//vvjv
 
 
     @Override
@@ -27,7 +27,7 @@ EditText userText, kodeText;
         logindButton =(Button)findViewById(R.id.logIndbutton);
         userText = (EditText)findViewById(R.id.userText);
         kodeText = (EditText)findViewById(R.id.kodeText);
-        logindButton.setOnClickListener(this);
+        logindButton.setOnClickListener(this);//kjahfk
 
 
 
@@ -36,6 +36,9 @@ EditText userText, kodeText;
 
     @Override
     public void onClick(View v) {
+        if(true){
+
+        }
 
 
     }

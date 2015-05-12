@@ -23,6 +23,7 @@ import com.parse.ParseException;
 import com.parse.ParseUser;
 import com.parse.SignUpCallback;
 
+import java.net.PasswordAuthentication;
 import java.util.regex.Pattern;
 
 public class Signup extends Activity implements OnClickListener {
@@ -41,9 +42,9 @@ public class Signup extends Activity implements OnClickListener {
         setContentView(R.layout.sign_up);
 
          //Enable Local Datastore./kjhkjhkjh     //https://github.com/fayaz0707/SwapArt.git
-         Parse.enableLocalDatastore(this);
+        // Parse.enableLocalDatastore(this);
 
-        Parse.initialize(this, "SypVmMOGroZ9crfo7fCJsaJgW7qI9f1YBcVmJlLa", "HCsmkcvyULayHEDwud0mO8z2cohrfAv3UwiVWuUT");
+        //Parse.initialize(this, "SypVmMOGroZ9crfo7fCJsaJgW7qI9f1YBcVmJlLa", "HCsmkcvyULayHEDwud0mO8z2cohrfAv3UwiVWuUT");
 
 
         wb = new WebView(this);
@@ -54,6 +55,13 @@ public class Signup extends Activity implements OnClickListener {
         checkBox= (CheckBox)findViewById(R.id.checkBox);
         tv.setOnClickListener(this);
         signUpKnap.setOnClickListener(this);
+        ParseUser currentUser = ParseUser.getCurrentUser();
+        if (currentUser != null) {
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+        } else {
+            // show the signup or login screen
+        }
 
     }
 

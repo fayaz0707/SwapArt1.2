@@ -7,7 +7,7 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="300dp"
-        android:id="@+id/imageView4"
+        android:id="@+id/imageView"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:background="@drawable/girl"
@@ -18,7 +18,7 @@
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_below="@+id/imageView4"
+        android:layout_below="@+id/imageView"
         android:layout_alignParentStart="true"
         android:background="@color/dim_foreground_disabled_material_dark">
 
@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:text="Afvis"
             android:textColor="#FFFFFF"
-            android:id="@+id/button"
+            android:id="@+id/afvisBtn"
             android:background="@drawable/roundedbutton"
             android:layout_centerVertical="true"
             android:layout_toStartOf="@+id/tilbageBtn" />
@@ -41,7 +41,7 @@
             android:layout_alignParentBottom="true"
             android:textColor="#FFFFFF"
             android:background="@drawable/roundedbutton"
-            android:layout_toStartOf="@+id/button2" />
+            android:layout_toStartOf="@+id/acceptBtn" />
 
         <Button
             style="?android:attr/buttonStyleSmall"
@@ -50,9 +50,9 @@
             android:text="Accepter"
             android:textColor="#FFFFFF"
             android:background="@drawable/roundedbutton"
-            android:id="@+id/button2"
+            android:id="@+id/acceptBtn"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="54dp"
-            android:layout_alignTop="@+id/button" />
+            android:layout_alignTop="@+id/afvisBtn" />
     </RelativeLayout>
 </RelativeLayout>

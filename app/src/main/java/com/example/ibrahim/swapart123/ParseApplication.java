@@ -21,8 +21,6 @@ public class ParseApplication extends Application {
         Parse.enableLocalDatastore(this);
 
         Parse.initialize(this, "SypVmMOGroZ9crfo7fCJsaJgW7qI9f1YBcVmJlLa", "HCsmkcvyULayHEDwud0mO8z2cohrfAv3UwiVWuUT");
-        Intent intent = new Intent(this, Signup.class);
-        startActivity(intent);
     }
 
 }
