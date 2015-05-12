@@ -35,7 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/editNavn"
-        android:text="Indtast navn på billede"
+        android:hint="Indtast navn på billede"
         android:layout_alignTop="@+id/linearLayout2"
         android:layout_toEndOf="@+id/textView4" />
 
@@ -74,7 +74,7 @@
         android:id="@+id/editStr"
         android:layout_below="@+id/editNavn"
         android:layout_alignEnd="@+id/linearLayout2"
-        android:text="Indsæt str"
+        android:hint="Indsæt str"
         android:layout_toEndOf="@+id/textView5" />
 
     <EditText
@@ -84,7 +84,7 @@
         android:layout_below="@+id/editStr"
         android:layout_alignStart="@+id/editStr"
         android:layout_alignEnd="@+id/linearLayout2"
-        android:text="Værdi på billedet" />
+        android:hint="Værdi på billedet" />
 
     <Button
         android:layout_width="wrap_content"
