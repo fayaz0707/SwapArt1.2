@@ -27,7 +27,7 @@ EditText userText, kodeText;//vvjv
         logindButton =(Button)findViewById(R.id.logIndbutton);
         userText = (EditText)findViewById(R.id.userText);
         kodeText = (EditText)findViewById(R.id.kodeText);
-        logindButton.setOnClickListener(this);
+        logindButton.setOnClickListener(this);//kjahfk
 
 
 
