@@ -16,7 +16,7 @@ import com.example.ibrahim.swapart1.R;
 public class Logind extends Activity implements OnClickListener {
 
 Button logindButton;
-EditText userText, kodeText;
+EditText userText, kodeText;//vvjv
 
 
     @Override
