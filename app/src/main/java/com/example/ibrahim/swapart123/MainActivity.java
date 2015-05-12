@@ -11,6 +11,9 @@ import android.widget.ImageView;
 import com.example.ibrahim.swapart1.R;
 import com.parse.Parse;
 import com.parse.ParseObject;
+import com.parse.ParseUser;
+
+import java.sql.SQLOutput;
 
 
 public class MainActivity extends Activity implements View.OnClickListener{
@@ -24,13 +27,13 @@ public class MainActivity extends Activity implements View.OnClickListener{
         setContentView(R.layout.activity_main);//jhgjhg
 
         // Enable Local Datastore./kjhkjhkjh     https://github.com/fayaz0707/SwapArt.git
-        Parse.enableLocalDatastore(this);
+       // Parse.enableLocalDatastore(this);
 
-        Parse.initialize(this, "SypVmMOGroZ9crfo7fCJsaJgW7qI9f1YBcVmJlLa", "HCsmkcvyULayHEDwud0mO8z2cohrfAv3UwiVWuUT");
+        //Parse.initialize(this, "SypVmMOGroZ9crfo7fCJsaJgW7qI9f1YBcVmJlLa", "HCsmkcvyULayHEDwud0mO8z2cohrfAv3UwiVWuUT");
 
-        ParseObject testObject = new ParseObject("TestObject");
-        testObject.put("foo", "bar");
-        testObject.saveInBackground();
+
+       // ParseObject testObject = new ParseObject("TestObject");
+       // testObject.saveInBackground();
         imageView1 = (ImageView)findViewById(R.id.imageView);
         imageView2 = (ImageView)findViewById(R.id.imageView2);
         //imageView3 = (ImageView)findViewById(R.id.imageView3);
@@ -73,9 +76,22 @@ public class MainActivity extends Activity implements View.OnClickListener{
         {
             Intent intent = new Intent(this, SwapArt.class);
             startActivity(intent);
-        }else if (v==oploadBtn){
+        }if (v==oploadBtn){
             Intent intent = new Intent(this, UploadBillede.class);
-            startActivity(intent);
+            startActivity(intent);//hgf
+        }
+        if (v==instillingerBtn){
+        Intent intent = new Intent(this, Logind.class);
+        startActivity(intent);//hgf
+
+        }
+        if (v==editBtn){
+            Intent intent = new Intent(this, GemBillede.class);
+            startActivity(intent);//hgf
+
+        }
+        if (v==matchBtn){
+
         }
     }
 }

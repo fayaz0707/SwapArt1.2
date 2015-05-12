@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.res.AssetFileDescriptor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
@@ -16,6 +17,8 @@ import android.widget.Toast;
 import com.example.ibrahim.swapart1.R;
 
 import java.io.IOException;
+import java.io.InputStream;
+import java.net.URI;
 
 /**
  * Created by kamranyusaf on 23/03/15.
@@ -23,9 +26,10 @@ import java.io.IOException;
 public class UploadBillede extends Activity implements View.OnClickListener {
 
     Button galleriButton, kameraButton, uploadButton;
+    ImageView imageView3;
     private int VÆLG_BILLEDE=1111;
     private int TAG_BILLEDE = 2222;
-    ImageView imageView3;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +37,7 @@ public class UploadBillede extends Activity implements View.OnClickListener {
         setContentView(R.layout.upload_billede);
 
         imageView3=(ImageView) findViewById(R.id.imageView3);
+        //imageView3.setImageResource(R.drawable.logo);
         galleriButton=(Button)findViewById(R.id.galleri_Button);
         galleriButton.setOnClickListener(this);
         kameraButton=(Button)findViewById(R.id.kamera_Button);
@@ -64,13 +69,22 @@ public class UploadBillede extends Activity implements View.OnClickListener {
         ContentResolver cr= getContentResolver();
         if (resultCode== RESULT_OK){
             try{
-                if (resultCode== VÆLG_BILLEDE){
+                if (requestCode== VÆLG_BILLEDE){
                     AssetFileDescriptor filDS = getContentResolver().openAssetFileDescriptor(resIntent.getData(), "r");
                     Bitmap bmp = BitmapFactory.decodeStream(filDS.createInputStream());
-                    imageView3.setImageBitmap(bmp);
-
+                    int nh = (int) ( bmp.getHeight() * (1800.0 / bmp.getWidth()) );
+                    Bitmap scaled = Bitmap.createScaledBitmap(bmp, 1024, nh, true);
+                    imageView3.setImageBitmap(scaled);
+                    //imageView3.setImageBitmap(bmp);
+                    /*Uri selelectedImageURi = resIntent.getData();
+                    InputStream imageStream = getContentResolver().openInputStream(selelectedImageURi);
+                    Bitmap yourSelectedImage = BitmapFactory.decodeStream(imageStream);
+                    int nh = (int) ( yourSelectedImage.getHeight() * (1800.0 / yourSelectedImage.getWidth()) );
+                    Bitmap scaled = Bitmap.createScaledBitmap(yourSelectedImage, 1024, nh, true);
+                    imageView3.setImageBitmap(scaled);*/
                 }else if (resultCode==TAG_BILLEDE){
                     Bitmap bmp = (Bitmap) resIntent.getExtras().get("data");
+                    //ImageView imageView3= new ImageView(this);
                     imageView3.setImageBitmap(bmp);
                 }
             }catch (IOException e) {
