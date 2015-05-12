@@ -52,6 +52,7 @@ public class SwapArt extends Activity implements View.OnClickListener {
             //ghjsgafhgaskjdfgaisg
             //hkjdfkjsdhfks
             //gfgfhmoinmi
+            //bjdajfbjbf fayaz
         }
     }
     public void setFeatureData(Context context, String className, String itemSelected,
